@@ -1,0 +1,44 @@
+﻿<!--
+     
+
+    
+    
+    
+
+    
+-->
+<Window x:Class="SudokuWPF.View.GameComplete"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:srcVM="clr-namespace:SudokuWPF.ViewModel"
+        Title="Sudoku - Puzzle Completed!"
+        Height="200"
+        Width="340"
+        ShowInTaskbar="False"
+        WindowStartupLocation="CenterOwner"
+        WindowStyle="SingleBorderWindow"
+        ResizeMode="NoResize"
+        SizeToContent="Height">
+
+    <Window.Resources>
+        <Style TargetType="TextBlock">
+            <Setter Property="HorizontalAlignment" Value="Center" />
+            <Setter Property="VerticalAlignment" Value="Center" />
+            <Setter Property="Padding" Value="5" />
+            <Setter Property="TextAlignment" Value="Center" />
+            <Setter Property="FontSize" Value="16" />
+        </Style>
+    </Window.Resources>
+
+    <StackPanel>
+        <TextBlock Text="Congratulations!"
+                   Padding="10"
+                   FontSize="24" />
+        <TextBlock Text="You have completed the puzzle!" />
+        <TextBlock Text="{Binding Path=GameTimeElapsed}" />
+        <Button Content="OK"
+                Width="75"
+                Margin="10"
+                Click="OKButton_Click" />
+    </StackPanel>
+</Window>
